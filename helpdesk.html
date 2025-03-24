@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="CWA Help Desk Appointment Form">
+    <meta name="keywords" content="CWA, Help Desk, Appointment">
+    <meta name="author" content="Your Name">
+    <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+
+    <a href="http://www.swin.edu.au">
+        <img src="swinburne_logo.png" alt="Swinburne Logo" width="150" height="100"> 
+    </a>
+
+    <h1>CWA Help Desk Appointment</h1>
+
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday. Check Blackboard for when CWA tutors will be there.</p>
+
+    <form method="post" action="your_form_processing_script.php"> 
+
+        <fieldset>
+            <legend>Student details</legend>
+
+            <p>
+                <label for="studentId">Student ID</label>
+                <input type="text" name="studentId" id="studentId" pattern="[0-9]{7,10}" required="required">
+            </p>
+
+            <p>
+                <label for="givenName">Given Name</label>
+                <input type="text" name="givenName" id="givenName" maxlength="15" pattern="[A-Za-z]+" required="required">
+            </p>
+
+            <p>
+                <label for="familyName">Family Name</label>
+                <input type="text" name="familyName" id="familyName" maxlength="15" pattern="[A-Za-z]+" required="required">
+            </p>
+
+            <p>
+                <label for="unit">Your unit</label>
+                <select name="unit" id="unit" required="required">
+                    <option value="">Select Unit</option> 
+                    <option value="COS10011">COS10011</option>
+                    <option value="COS60004">COS60004</option>
+                    <option value="COS60007">COS60007</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="tutor">Your Tutor</label>
+                <select name="tutor" id="tutor" required="required">
+                    <option value="">Please Select</option>
+                    <option value="Mr Dodo">Tutor 1</option>
+                    <option value="Mrs Haopy Face">Tutor 2</option>
+                    <option value="Mr Grumpy Pants">Tutor 3</option>
+                    
+                </select>
+            </p>
+
+            <p>
+                <label>Issue</label><br>
+                <label for="html">HTML</label>
+                <input type="checkbox" name="issue[]" id="html" value="html" checked="checked">
+                <label for="css">CSS</label>
+                <input type="checkbox" name="issue[]" id="css" value="css">
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" name="issue[]" id="javascript" value="javascript">
+                <label for="php">PHP</label>
+                <input type="checkbox" name="issue[]" id="php" value="php">
+                <label for="mysql">MySQL</label>
+                <input type="checkbox" name="issue[]" id="mysql" value="mysql">
+            </p>
+
+            <p>
+                <label for="description">Description of Issue</label><br>
+                <textarea name="description" id="description" placeholder="Write description of your problem here..."></textarea>
+            </p>
+
+            <p>
+                <label>Preferred Date / Time</label><br>
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+                <label for="time">Time</label>
+                <input type="time" name="time" id="time">
+            </p>
+
+            <p>
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </p>
+
+        </fieldset>
+
+        <input type="submit" value="Book">
+        <input type="reset" value="Reset form">
+    </form>
+
+</body>
+</html>
